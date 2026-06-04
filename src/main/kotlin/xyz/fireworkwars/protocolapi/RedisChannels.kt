@@ -1,11 +1,6 @@
 package xyz.fireworkwars.protocolapi
 
-/**
- * Canonical Redis channel names used across the network. Every publisher and subscriber
- * (proxy, lobby, game, lava-rising, common) references these constants — never the raw
- * strings — so a channel rename is a one-line change with a compile error at every site
- * that needs updating.
- */
+/** Redis Channel Ids */
 object RedisChannels {
     const val SERVER_REGISTER = "fww:server_register"
     const val SERVER_STATE = "fww:server_state"

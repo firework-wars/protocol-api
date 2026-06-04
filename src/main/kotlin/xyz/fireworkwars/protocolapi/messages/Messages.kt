@@ -41,7 +41,7 @@ data class PlayerDisconnectMessage(
     val serverId: String
 )
 
-/** Proxy-pushed snapshot of every known server. Sent on changes and on directory_request. */
+/** Live server info of every backend, sent by the proxy */
 @Serializable
 data class ServerDirectoryMessage(
     val servers: List<ServerDirectoryEntry>
@@ -58,7 +58,7 @@ data class ServerDirectoryEntry(
     val mapName: String
 )
 
-/** A console command to dispatch on a specific backend. Subscribed to by FWWCommon. */
+/** Dispatch command in a specific backend server request */
 @Serializable
 data class ServerCommandMessage(
     val serverId: String,

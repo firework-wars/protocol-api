@@ -2,18 +2,7 @@ package xyz.fireworkwars.protocolapi
 
 import kotlinx.serialization.Serializable
 
-/**
- * Per-backend operational + cosmetic config. Loaded from `plugins/FWWCommon/common.json`
- * on every Paper backend (lobby, game, lava-rising). The single source of truth on a
- * backend — individual game/lobby plugins no longer ship their own `NetworkConfig`.
- *
- * `serverType` and `mapName` are only meaningful for game backends (FWW_BARRACKS, LR, …);
- * lobbies leave them blank and derive their own serverType from `lobby.json`'s lobbyType.
- *
- * Lives in protocol-api (rather than the common plugin) so every backend can deserialize
- * the same file off its own classpath without depending on FWWCommon at compile or load
- * time. The proxy doesn't read this — it has its own NetworkConfig.
- */
+/** Shared default config of the Common plugin on each backend */
 @Serializable
 data class CommonConfig(
     val serverId: String,
