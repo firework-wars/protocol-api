@@ -18,5 +18,5 @@ data class CommonConfig(
     val applyTablist: Boolean = true,
 
     val tablistHeader: String = "<bold><color:#ff365e>Firework</color> <color:#00e0e0>Wars</color></bold>",
-    val tablistFooter: String = "<newline><gray>play.fireworkwars.xyz<newline><aqua>discord.gg/fireworkwars"
+    val tablistFooter: String = "<newline><gray>play.fireworkwars.net<newline><aqua>discord.fireworkwars.net"
 )
