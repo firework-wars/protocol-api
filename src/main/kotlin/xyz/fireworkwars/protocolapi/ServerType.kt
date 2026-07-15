@@ -1,6 +1,5 @@
 package xyz.fireworkwars.protocolapi
 
-/** Server template type */
 @Suppress("unused")
 enum class ServerType {
     LOBBY_MAIN,

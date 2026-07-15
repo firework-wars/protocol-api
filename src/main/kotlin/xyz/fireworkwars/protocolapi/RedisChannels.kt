@@ -1,6 +1,5 @@
 package xyz.fireworkwars.protocolapi
 
-/** Redis Channel Ids */
 object RedisChannels {
     const val SERVER_REGISTER = "fww:server_register"
     const val SERVER_STATE = "fww:server_state"
