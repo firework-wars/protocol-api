@@ -37,12 +37,12 @@ data class PlayerDisconnectMessage(
 )
 
 @Serializable
-data class ServerDirectoryMessage(
-    val servers: List<ServerDirectoryEntry>
+data class ServerListMessage(
+    val servers: List<ServerInfo>
 )
 
 @Serializable
-data class ServerDirectoryEntry(
+data class ServerInfo(
     val id: String,
     val type: String,
     val port: Int,
