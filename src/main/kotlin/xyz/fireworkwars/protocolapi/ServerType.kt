@@ -17,6 +17,9 @@ enum class ServerType {
     val isGame: Boolean
         get() = !isLobby
 
+    val templateName: String
+        get() = name.lowercase()
+
     val lobbyId: String
         get() {
             require(isLobby) { "lobbyId is only defined for lobby ServerTypes (got $this)" }
