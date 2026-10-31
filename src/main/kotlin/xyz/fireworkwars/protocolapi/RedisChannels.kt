@@ -14,4 +14,9 @@ object RedisChannels {
     const val PROFILE_UPDATED = "fww:profile_updated"
 
     const val SERVER_COMMAND = "fww:server_command"
+
+    const val CHAT_CHANNEL = "fww:chat_channel"
+    const val PARTY_CHAT = "fww:party_chat"
+    const val CHAT_AS = "fww:chat_as"
+    const val PARTY_JOIN = "fww:party_join"
 }

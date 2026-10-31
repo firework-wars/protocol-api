@@ -20,7 +20,11 @@ val messageChannels: Map<KClass<out NetworkMessage>, String> = mapOf(
     PlayerJoinGameMessage::class to RedisChannels.PLAYER_JOIN_GAME,
     PlayerDisconnectMessage::class to RedisChannels.PLAYER_DISCONNECT,
     ProfileUpdatedMessage::class to RedisChannels.PROFILE_UPDATED,
-    ServerCommandMessage::class to RedisChannels.SERVER_COMMAND
+    ServerCommandMessage::class to RedisChannels.SERVER_COMMAND,
+    ChatChannelMessage::class to RedisChannels.CHAT_CHANNEL,
+    PartyChatMessage::class to RedisChannels.PARTY_CHAT,
+    ChatAsMessage::class to RedisChannels.CHAT_AS,
+    PartyJoinMessage::class to RedisChannels.PARTY_JOIN
 )
 
 inline fun <reified T : NetworkMessage> MessageBus.publish(message: T) {
