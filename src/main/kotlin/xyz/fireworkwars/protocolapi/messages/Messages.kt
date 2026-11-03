@@ -78,28 +78,24 @@ data class ServerCommandMessage(
     val command: String
 ) : NetworkMessage
 
-/** Which chat a player's typed messages go to (proxy → every server, on change and when the player switches server). */
 @Serializable
 data class ChatChannelMessage(
     val playerUuid: String,
     val channel: ChatChannel
 ) : NetworkMessage
 
-/** A message a player typed while in the party channel (server → proxy, which delivers it to the party). */
 @Serializable
 data class PartyChatMessage(
     val playerUuid: String,
     val message: String
 ) : NetworkMessage
 
-/** Makes the player say [message] in their server's normal chat, whatever their channel (proxy → server). */
 @Serializable
 data class ChatAsMessage(
     val playerUuid: String,
     val message: String
 ) : NetworkMessage
 
-/** These players are joining [serverId] as one party and should share a team (proxy → game server). */
 @Serializable
 data class PartyJoinMessage(
     val serverId: String,
